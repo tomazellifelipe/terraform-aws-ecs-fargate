@@ -1,5 +1,17 @@
 # terraform-aws-ecs-fargate
 
+# Description
+Simple module for an AWS ECS Service running on FARGATE and using an ALB
+
+# FAQ
+Q: Why don't you create a target group and ALB ?
+A: You can't add a target group to a ecs service without a ALB and ALB is to complex with many options,
+another reason is that like this you can add an already created ALB or use a shared one for many services.
+
+Q: Why don't you create a taskDefinition and ECR ?
+A: Because a taskDefinition can have many options and would be dificult to know how many containers are needed,
+and ECR because it is a simple resouce easy to create and can be used in many places on AWS.
+
 <!--- TERRAFORM DOCS BEGIN -->
 ## Requirements
 
