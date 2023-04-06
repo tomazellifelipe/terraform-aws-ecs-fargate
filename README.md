@@ -12,6 +12,10 @@ Q: Why don't you create a taskDefinition and ECR ?
 A: Because a taskDefinition can have many options and would be dificult to know how many containers are needed,
 and ECR because it is a simple resouce easy to create and can be used in many places on AWS.
 
+Q: Why do you set desired count to 0 ?
+A: That is because you may need to push an ECR image first, or set a pipeline or something like that,
+so I don't like that the deploy keeps failing until it is fixed. You can set by hand when it is ready.
+
 <!--- TERRAFORM DOCS BEGIN -->
 ## Requirements
 
